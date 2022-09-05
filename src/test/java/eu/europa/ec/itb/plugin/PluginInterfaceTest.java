@@ -1,11 +1,10 @@
-package eu.europa.ec.itb.json;
+package eu.europa.ec.itb.plugin;
 
 import com.gitb.core.AnyContent;
 import com.gitb.tr.TestResultType;
 import com.gitb.vs.ValidateRequest;
 import com.gitb.vs.ValidationResponse;
 import com.gitb.vs.Void;
-import eu.europa.ec.itb.plugin.PluginInterface;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
