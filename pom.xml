@@ -3,22 +3,21 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>eu.europa.ec.itb.json</groupId>
     <artifactId>sample-plugin</artifactId>
     <version>1.0-SNAPSHOT</version>
-
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <version.gitbTypes>1.17.0</version.gitbTypes>
+        <!-- Plugin dependencies -->
         <version.compilerPlugin>3.10.1</version.compilerPlugin>
         <version.assemblyPlugin>3.4.2</version.assemblyPlugin>
         <version.surefirePlugin>3.0.0-M7</version.surefirePlugin>
+        <!-- Library dependencies -->
+        <version.gitbTypes>1.17.0</version.gitbTypes>
         <version.junit>5.9.0</version.junit>
     </properties>
-
     <build>
         <plugins>
             <plugin>
@@ -54,7 +53,6 @@
         </plugins>
         <finalName>validator-plugin-sample</finalName>
     </build>
-
     <dependencies>
         <dependency>
             <groupId>eu.europa.ec.itb</groupId>
@@ -68,5 +66,4 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
 </project>
