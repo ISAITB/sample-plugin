@@ -40,6 +40,15 @@ public class PluginInterface implements ValidationService {
 
     private final com.gitb.tr.ObjectFactory objectFactory = new ObjectFactory();
 
+    /**
+     * This method is called by the validator to identify the plugin by means of the returned ID.
+     *
+     * Implementing this method is not necessary (you may simply return null), but returning an ID allows the
+     * validator to reference the specific plugin if unexpected errors come up.
+     *
+     * @param aVoid To be provided as an instance given that no inputs are expected here.
+     * @return The plugin's identification (can be null).
+     */
     @Override
     public GetModuleDefinitionResponse getModuleDefinition(Void aVoid) {
         GetModuleDefinitionResponse response = new GetModuleDefinitionResponse();
@@ -48,6 +57,16 @@ public class PluginInterface implements ValidationService {
         return response;
     }
 
+    /**
+     * This method is the entry point for the plugin which is called by the validator.
+     *
+     * The method receives from the validator a standard (per validator type) set of inputs that the plugin can consider
+     * when carrying out its assertions. The resulting response includes a report that in turn contains any findings that
+     * need to be added to the overall validation report.
+     *
+     * @param request The plugin's inputs.
+     * @return The plugin's contribution to the overall report.
+     */
     @Override
     public ValidationResponse validate(ValidateRequest request) {
         /*
@@ -91,6 +110,11 @@ public class PluginInterface implements ValidationService {
         return response;
     }
 
+    /**
+     * Create an empty TAR report with default values.
+     *
+     * @return The report instance.
+     */
     private TAR createReport() {
         TAR report = new TAR();
         report.setResult(TestResultType.SUCCESS);
@@ -105,6 +129,12 @@ public class PluginInterface implements ValidationService {
         return report;
     }
 
+    /**
+     * Return the size of the provided file.
+     *
+     * @param file The file.
+     * @return The size (bytes).
+     */
     private long readFileSize(Path file) {
         try {
             return Files.size(file);

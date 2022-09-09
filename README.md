@@ -2,7 +2,9 @@
 
 This project serves as a sample implementation of a **custom validator plugin**. It can be used as a plugin for any
 [XML](https://www.itb.ec.europa.eu/docs/guides/latest/validatingXML/index.html), [RDF](https://www.itb.ec.europa.eu/docs/guides/latest/validatingRDF/index.html),
-[JSON](https://www.itb.ec.europa.eu/docs/guides/latest/validatingJSON/index.html) or [CSV](https://www.itb.ec.europa.eu/docs/guides/latest/validatingCSV/index.html) validator.
+[JSON](https://www.itb.ec.europa.eu/docs/guides/latest/validatingJSON/index.html) or [CSV](https://www.itb.ec.europa.eu/docs/guides/latest/validatingCSV/index.html)
+validator. The detailed guide explaining how validator plugins work, which also provides step-by-step documentation on
+how this specific plugin is defined, is available [here](https://www.itb.ec.europa.eu/docs/guides/latest/creatingCustomValidatorPlugin/index.html).
 
 The purpose of this specific plugin is to check the size (in bytes) of the input being validated and react as follows:
 * Return an **error** if more than 10KB.
