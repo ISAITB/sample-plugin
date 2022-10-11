@@ -38,12 +38,12 @@ by declaring it in the domain's configuration file as follows:
 
 ```
 # Point to the JAR file that packages the plugin.
-validator.plugins.defaultPlugins.0.jar = plugins/validator-plugin-sample-jar-with-dependencies.jar
+validator.defaultPlugins.0.jar = plugins/validator-plugin-sample-jar-with-dependencies.jar
 # Identify the plugin's entry point class.
-validator.plugins.defaultPlugins.0.class = eu.europa.ec.itb.plugin.PluginInterface
+validator.defaultPlugins.0.class = eu.europa.ec.itb.plugin.PluginInterface
 ```
 
-Using properties `validator.plugins.defaultPlugins` defines the plugin as applicable for all types of validation. If you 
+Using properties `validator.defaultPlugins` defines the plugin as applicable for all types of validation. If you 
 want to apply it only for specific types you can use the `validator.plugins.myType` prefix instead (assuming `myType`
 is a declared validation type). In both cases, multiple plugins can be defined by adding new entries and incrementing the 
 property's index accordingly.
